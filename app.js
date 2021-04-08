@@ -7,7 +7,7 @@
 // b();
 // console.log(a);
 
-var a;
+var a = "defined";
 console.log(a);
 
 if (a === undefined) {
