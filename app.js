@@ -1,8 +1,18 @@
-var a = 'Hello World';
+// var a = 'Hello World';
+//
+// function b(){
+//  console.log('Called b!');
+// }
+//
+// b();
+// console.log(a);
 
-function b(){
- console.log('Called b!');
-}
-
-b();
+var a;
 console.log(a);
+
+if (a === undefined) {
+  console.log('a is undefined!');
+}
+else {
+  console.log ('a is defined');
+}
