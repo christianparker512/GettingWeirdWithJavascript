@@ -43,16 +43,39 @@
 
 
 //long running function
-function waitThreeSeconds(){
-  var ms = 3000 + new Date().getTime();
-  while (new Date() <ms){}
-  console.log('finished function');
-}
-function clickHandler(){
-  console.log('clickevent!');
-}
-//listen for the click event
-document.addEventListener('click', clickHandler);
+// function waitThreeSeconds(){
+//   var ms = 3000 + new Date().getTime();
+//   while (new Date() <ms){}
+//   console.log('finished function');
+// }
+// function clickHandler(){
+//   console.log('clickevent!');
+// }
+// //listen for the click event
+// document.addEventListener('click', clickHandler);
+//
+// waitThreeSeconds();
+// console.log('finished execution');
 
-waitThreeSeconds();
-console.log('finished execution');
+var a = 3+4;
+console.log(a);
+//
+// // prefix noation
+// +3 5;
+// //postfix notation
+// 3 5+;
+
+var a = 3 + 4 * 5;
+console.log(a);
+
+var d = 2, e = 3, f = 5;
+d = e = f;
+console.log(d);
+console.log(e);
+console.log(f);
+// These will all be 5 do to associativity.
+
+var a = 1, b = '2';
+console.log(a+b);
+
+
