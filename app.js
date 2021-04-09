@@ -26,17 +26,33 @@
 // console.log(a);
 
 
-function b() {
+// function b() {
+//
+//   console.log(myVar);
+// }
+//
+// function a(){
+//   var myVar =2;
+//   console.log(myVar);
+//   b();
+// }
+// var myVar =1;
+// console.log(myVar);
+// a();
+// console.log(myVar);
 
-  console.log(myVar);
-}
 
-function a(){
-  var myVar =2;
-  console.log(myVar);
-  b();
+//long running function
+function waitThreeSeconds(){
+  var ms = 3000 + new Date().getTime();
+  while (new Date() <ms){}
+  console.log('finished function');
 }
-var myVar =1;
-console.log(myVar);
-a();
-console.log(myVar);
+function clickHandler(){
+  console.log('clickevent!');
+}
+//listen for the click event
+document.addEventListener('click', clickHandler);
+
+waitThreeSeconds();
+console.log('finished execution');
