@@ -89,3 +89,9 @@ if (a ===b){
 } else {
   console.log('Nope, not equal.');
 }
+
+function greet (name){
+  console.log('Hello ' + name);
+
+}
+greet();
