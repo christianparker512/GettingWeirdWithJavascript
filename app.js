@@ -78,4 +78,14 @@ console.log(f);
 var a = 1, b = '2';
 console.log(a+b);
 
+Number("3");
 
+
+var a =0;
+var b = false;
+
+if (a ===b){
+  console.log('They are equal!');
+} else {
+  console.log('Nope, not equal.');
+}
