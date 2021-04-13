@@ -122,7 +122,7 @@ console.log(person["address"]["state"]);
 var person = {};
 console.log(person);
 
-var person = {
+var Christian = {
   firstname: 'Christian',
   lastname: 'Parker',
   address: {
@@ -134,3 +134,37 @@ var person = {
 
 console.log(person);
 
+function greet (person){
+  console.log ('Hi ' + person.firstname);
+
+}
+greet(Christian);
+greet({firstname: 'Lisa', lastname: 'Parker'});
+
+Christian.address2 = {
+  street: ' 333 Second Street'
+}
+
+
+var salutations = 'Hello!';
+var salutations = 'Hola!';
+console.log(salutations);
+
+var english = {};
+var spanish = {};
+
+english.salutations = 'Hello!';
+spanish.saluations = 'Hola';
+console.log(english);
+console.log(spanish);
+
+var english = {
+  greetings: {
+    basic: 'Hello!'
+  }
+};
+var spanish = {
+  greetings: {
+    basic: 'Hola!'
+  }
+};
