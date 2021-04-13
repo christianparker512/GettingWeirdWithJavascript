@@ -168,3 +168,23 @@ var spanish = {
     basic: 'Hola!'
   }
 };
+// JSON - javascript object Notation and object literals
+
+var objectLiteral = {
+  firstname: 'Lisa',
+  lastname: 'Parker'
+}
+console.log(objectLiteral);
+
+
+var objectLiteral2 = {
+  firstName: 'Christian',
+  isAProgrammer: true
+}
+console.log(JSON.stringify(objectLiteral2));
+
+// var jsonValue = JSON.parse ('{
+//     "firstname": "Christian",
+//     "isAProgrammer: true"}');
+// // //
+// console.log(jsonValue);
