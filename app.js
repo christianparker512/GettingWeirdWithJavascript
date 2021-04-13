@@ -216,9 +216,25 @@ console.log(person["address"]["state"]);
  console.log(b);
 
  // By reference (all objects(including functions));
+//once you change one, you change all by reference.
  var c = {greeting: 'hi'};
  var d;
  d = c;
  c.greeting = 'hello';
  console.log(c);
  console.log(d);
+
+
+ //by reference (even as parameters)
+function changeGreeting(obj){
+  obj.greeting = 'Hola'; //mutate
+}
+changeGreeting(d);
+console.log(c);
+console.log(d);
+
+
+//equals operator sets up new memory space (new address)
+c = { greeting: 'howdy'};
+console.log(c);
+console.log(d);
