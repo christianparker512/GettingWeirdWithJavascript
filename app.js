@@ -116,3 +116,21 @@ person.address.city = "San Antonio";
 person.address.state = "Texas";
 
 console.log(person["address"]["state"]);
+
+// object literals
+// This is the same as a new object
+var person = {};
+console.log(person);
+
+var person = {
+  firstname: 'Christian',
+  lastname: 'Parker',
+  address: {
+    street: '111 Main Street',
+    city: 'San Antonio',
+    state: 'Texas'
+  }
+};
+
+console.log(person);
+
