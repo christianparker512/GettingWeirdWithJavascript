@@ -75,23 +75,34 @@ console.log(e);
 console.log(f);
 // These will all be 5 do to associativity.
 
-var a = 1, b = '2';
-console.log(a+b);
+// var a = 1, b = '2';
+// console.log(a+b);
+//
+// Number("3");
+//
+//
+// var a =0;
+// var b = false;
+//
+// if (a ===b){
+//   console.log('They are equal!');
+// } else {
+//   console.log('Nope, not equal.');
+// }
+//
+// function greet (name){
+//   console.log('Hello ' + name);
+//
+// }
+// greet();
 
-Number("3");
+// console.log(libraryName);
 
+var person = new Object();
+// Setting the firstname property using brackets
+person ["firstname"] = "Christian";
+person ["lastname"] = "Parker";
 
-var a =0;
-var b = false;
-
-if (a ===b){
-  console.log('They are equal!');
-} else {
-  console.log('Nope, not equal.');
-}
-
-function greet (name){
-  console.log('Hello ' + name);
-
-}
-greet();
+var firstNameProperty = "firstname";
+console.log(person);
+console.log(person[firstNameProperty]);
