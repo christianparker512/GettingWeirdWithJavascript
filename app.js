@@ -119,72 +119,106 @@ console.log(person["address"]["state"]);
 
 // object literals
 // This is the same as a new object
-var person = {};
-console.log(person);
-
-var Christian = {
-  firstname: 'Christian',
-  lastname: 'Parker',
-  address: {
-    street: '111 Main Street',
-    city: 'San Antonio',
-    state: 'Texas'
-  }
-};
-
-console.log(person);
-
-function greet (person){
-  console.log ('Hi ' + person.firstname);
-
-}
-greet(Christian);
-greet({firstname: 'Lisa', lastname: 'Parker'});
-
-Christian.address2 = {
-  street: ' 333 Second Street'
-}
-
-
-var salutations = 'Hello!';
-var salutations = 'Hola!';
-console.log(salutations);
-
-var english = {};
-var spanish = {};
-
-english.salutations = 'Hello!';
-spanish.saluations = 'Hola';
-console.log(english);
-console.log(spanish);
-
-var english = {
-  greetings: {
-    basic: 'Hello!'
-  }
-};
-var spanish = {
-  greetings: {
-    basic: 'Hola!'
-  }
-};
-// JSON - javascript object Notation and object literals
-
-var objectLiteral = {
-  firstname: 'Lisa',
-  lastname: 'Parker'
-}
-console.log(objectLiteral);
-
-
-var objectLiteral2 = {
-  firstName: 'Christian',
-  isAProgrammer: true
-}
-console.log(JSON.stringify(objectLiteral2));
+// var person = {};
+// console.log(person);
+//
+// var Christian = {
+//   firstname: 'Christian',
+//   lastname: 'Parker',
+//   address: {
+//     street: '111 Main Street',
+//     city: 'San Antonio',
+//     state: 'Texas'
+//   }
+// };
+//
+// console.log(person);
+//
+// function greet (person){
+//   console.log ('Hi ' + person.firstname);
+//
+// }
+// greet(Christian);
+// greet({firstname: 'Lisa', lastname: 'Parker'});
+//
+// Christian.address2 = {
+//   street: ' 333 Second Street'
+// }
+//
+//
+// var salutations = 'Hello!';
+// var salutations = 'Hola!';
+// console.log(salutations);
+//
+// var english = {};
+// var spanish = {};
+//
+// english.salutations = 'Hello!';
+// spanish.saluations = 'Hola';
+// console.log(english);
+// console.log(spanish);
+//
+// var english = {
+//   greetings: {
+//     basic: 'Hello!'
+//   }
+// };
+// var spanish = {
+//   greetings: {
+//     basic: 'Hola!'
+//   }
+// };
+// // JSON - javascript object Notation and object literals
+//
+// var objectLiteral = {
+//   firstname: 'Lisa',
+//   lastname: 'Parker'
+// }
+// console.log(objectLiteral);
+//
+//
+// var objectLiteral2 = {
+//   firstName: 'Christian',
+//   isAProgrammer: true
+// }
+// console.log(JSON.stringify(objectLiteral2));
 
 // var jsonValue = JSON.parse ('{
 //     "firstname": "Christian",
 //     "isAProgrammer: true"}');
 // // //
 // console.log(jsonValue);
+
+
+// function greet (){
+//   console.log('hi');
+// }
+// greet.language ="english";
+// console.log(greet);
+ var a;
+
+ function greet(){
+   console.log('hi')
+ }
+
+ var anonymousGreet = function (){
+   console.log('hi');
+ }
+ anonymousGreet();
+
+
+ // by value
+ var a = 3;
+ var b;
+ b = a;
+ a = 2;
+ console.log(a);
+ console.log(b);
+
+ // By reference (all objects(including functions));
+ var c = {greeting: 'hi'};
+ var d;
+ d = c;
+ c.greeting = 'hello';
+ console.log(c);
+ console.log(d);
