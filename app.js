@@ -109,3 +109,10 @@ console.log(person[firstNameProperty]);
 
 console.log(person.firstname);
 console.log(person.lastname);
+
+person.address = new Object();
+person.address.street = "111 Main street";
+person.address.city = "San Antonio";
+person.address.state = "Texas";
+
+console.log(person["address"]["state"]);
