@@ -282,3 +282,13 @@ var arr = [
 ];
 console.log(arr);
 arr[3](arr[2].name);
+
+function greet(firstname, lastname, language){
+
+  console.log(firstname);
+  console.log(lastname);
+  console.log(language);
+}
+greet();
+greet('Quincy');
+
