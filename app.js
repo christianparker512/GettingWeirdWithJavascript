@@ -332,3 +332,85 @@ function getPerson(){
   }
 }
 console.log(getPerson());
+
+
+var firstname, lastname, language;
+
+var person = {
+  firstname: 'Christian',
+  lastname: 'Parker is Creative'
+}
+console.log(person);
+
+//function statement
+function greet3(name){
+  console.log('Hello ' + name);
+}
+greet3('Chris');
+
+//using a function literal
+var greetFunct = function(name){
+  console.log('Hello ' + name);
+};
+greetFunct('Chris');
+
+//Immediate invoked functional expression
+var greetin4 = function(name){
+  console.log('Hello '+ name);
+}
+greetin4();
+
+var firstname = "Christian";
+(function(name){
+
+  var greeting = 'Inside IIFE: Hello';
+  console.log(greet + ' ' + name);
+}(firstname));
+
+function buildFunctions() {
+
+  var arr = [];
+
+  for (var i = 0; i < 3; i++) {
+
+    arr.push(
+      function() {
+        console.log(i);
+      }
+    )
+
+  }
+
+  return arr;
+}
+
+var fs = buildFunctions();
+
+fs[0]();
+fs[1]();
+fs[2]();
+
+//This bucket will post in the console the value of i as it loops through the for loop.
+function buildFunctions2() {
+
+  var arr = [];
+
+  for (var i = 0; i < 3; i++) {
+    arr.push(
+      (function(j) {
+        return function() {
+          console.log(j);
+        }
+      }(i))
+    )
+
+  }
+
+  return arr;
+}
+
+var fs2 = buildFunctions2();
+
+fs2[0]();
+fs2[1]();
+fs2[2]();
