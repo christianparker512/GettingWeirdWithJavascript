@@ -378,7 +378,6 @@ function buildFunctions() {
         console.log(i);
       }
     )
-
   }
 
   return arr;
@@ -414,3 +413,27 @@ var fs2 = buildFunctions2();
 fs2[0]();
 fs2[1]();
 fs2[2]();
+
+function sayHiLater(){
+  var greeting = 'Hi!';
+  setTimeout(function() {
+    console.log(greeting);
+  }, 3000);
+}
+sayHiLater();
+
+// jQuery uses function expressions and first class functions
+
+// $("button").click(function(){
+
+// });
+
+function tellMeWhenDone(callback){
+  var a = 1000;
+  var b = 2000;
+
+  callback();
+}
+tellMeWhenDone(function(){
+  alert('I am Done!');
+});
