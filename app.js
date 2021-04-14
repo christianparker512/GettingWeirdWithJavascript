@@ -238,3 +238,14 @@ console.log(d);
 c = { greeting: 'howdy'};
 console.log(c);
 console.log(d);
+
+function a(){
+  console.log(this);
+  this.newvariable = 'hell';
+}
+
+var b = function() {
+  console.log(this);
+}
+a();
+b();
