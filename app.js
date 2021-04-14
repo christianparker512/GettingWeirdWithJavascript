@@ -305,3 +305,30 @@ greet('Quincy');
 greet('Quincy', 'parker');
 greet('Quincy', 'parker', 'dog');
 
+
+function greet2 (firstname, lastname, language){
+  language = language || 'en';
+
+  if (language === 'en') {
+    console.log('Hello ' + firstname + ' ' + lastname);
+  }
+  if (language === 'es') {
+    console.log('Hola ' + firstname + ' ' + lastname);
+  }
+}
+function greetEnglish(firstname, lastname){
+  greet2(firstname, lastname, 'en');
+}
+function greetSpanish(firstname, lastname){
+  greet2(firstname, lastname, 'es');
+}
+greetEnglish('John', 'Doe', 'en');
+greetSpanish('Cristian', 'Parker', 'es');
+
+
+function getPerson(){
+  return {
+    firstname: 'Christian'
+  }
+}
+console.log(getPerson());
