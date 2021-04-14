@@ -291,4 +291,6 @@ function greet(firstname, lastname, language){
 }
 greet();
 greet('Quincy');
+greet('Quincy', 'parker');
+greet('Quincy', 'parker', 'dog');
 
