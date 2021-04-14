@@ -195,57 +195,65 @@ console.log(person["address"]["state"]);
 // }
 // greet.language ="english";
 // console.log(greet);
- var a;
-
- function greet(){
-   console.log('hi')
- }
-
- var anonymousGreet = function (){
-   console.log('hi');
- }
- anonymousGreet();
+//  var a;
+//
+//  function greet(){
+//    console.log('hi')
+//  }
+//
+//  var anonymousGreet = function (){
+//    console.log('hi');
+//  }
+//  anonymousGreet();
 
 
  // by value
- var a = 3;
- var b;
- b = a;
- a = 2;
- console.log(a);
- console.log(b);
+//  var a = 3;
+//  var b;
+//  b = a;
+//  a = 2;
+//  console.log(a);
+//  console.log(b);
+//
+//  // By reference (all objects(including functions));
+// //once you change one, you change all by reference.
+//  var c = {greeting: 'hi'};
+//  var d;
+//  d = c;
+//  c.greeting = 'hello';
+//  console.log(c);
+//  console.log(d);
+//
+//
+//  //by reference (even as parameters)
+// function changeGreeting(obj){
+//   obj.greeting = 'Hola'; //mutate
+// }
+// changeGreeting(d);
+// console.log(c);
+// console.log(d);
+//
+//
+// //equals operator sets up new memory space (new address)
+// c = { greeting: 'howdy'};
+// console.log(c);
+// console.log(d);
 
- // By reference (all objects(including functions));
-//once you change one, you change all by reference.
- var c = {greeting: 'hi'};
- var d;
- d = c;
- c.greeting = 'hello';
- console.log(c);
- console.log(d);
-
-
- //by reference (even as parameters)
-function changeGreeting(obj){
-  obj.greeting = 'Hola'; //mutate
+// function a(){
+//   console.log(this);
+//   this.newvariable = 'hello';
+// }
+//
+// var b = function() {
+//   console.log(this);
+// }
+// a();
+// console.log(newvariable);
+// b();
+var c = {
+  name: 'The c object',
+  log: function(){
+    console.log(this);
+  }
 }
-changeGreeting(d);
-console.log(c);
-console.log(d);
-
-
-//equals operator sets up new memory space (new address)
-c = { greeting: 'howdy'};
-console.log(c);
-console.log(d);
-
-function a(){
-  console.log(this);
-  this.newvariable = 'hell';
-}
-
-var b = function() {
-  console.log(this);
-}
-a();
-b();
+c.log();
