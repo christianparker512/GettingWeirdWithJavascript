@@ -590,3 +590,82 @@ console.log(vince);
 
 var baxter = new People('baxter', 'parker');
 console.log(baxter);
+
+var a = new Number(3);
+
+Array.prototype.myCustomerFeature = "cool!";
+var arr = ['chris', 'quincy', 'baxter'];
+for (var prop in arr) {
+  console.log(prop + ": " + arr[prop]);
+}
+
+var personperson = {
+  firstname: 'Default',
+  lastname: 'Default',
+  greet: function(){
+    return 'Hi ' + this.firstname;
+  }
+}
+
+var christian = Object.create(personperson);
+christian.firstname = "Christian";
+christian.lastname = "Parker";
+console.log(christian);
+
+// polyfill
+if (!Object.create) {
+  Object.create = function (o) {
+    if (arguments.length > 1) {
+      throw new Error('Object.create implementation'
+        + ' only accepts the first parameter.');
+    }
+    function F() {}
+    F.prototype = o;
+    return new F();
+  };
+}
+
+var person = {
+  firstname: 'Default',
+  lastname: 'Default',
+  greet: function() {
+    return 'Hi ' + this.firstname;
+  }
+}
+
+var john = Object.create(person);
+john.firstname = 'John';
+john.lastname = 'Doe';
+console.log(john);
+
+//typeof
+
+var l = 3;
+console.log(typeof l);
+
+var m = "hello";
+console.log(typeof m);
+
+var n = {};
+console.log(typeof n);
+
+var o = [];
+console.log(typeof o);
+console.log(Object.prototype.toString.call(o));
+
+function Student(name){
+  this.name=name;
+}
+var p = new Student ('Pia');
+console.log(typeof p);
+console.log(p instanceof Student);
+
+console.log(typeof undefined);
+console.log(typeof null);
+
+var z = function(){};
+console.log(typeof z);
+
+
+var q = $("ul.people li");
+console.log(q);
