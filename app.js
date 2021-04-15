@@ -545,3 +545,29 @@ var checkPastLimitSimplified = function(limiter) {
 
 var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
 console.log(arr5);
+
+
+var person = {
+  firstname: "default",
+  lastname: "default",
+  getFullName: function(){
+    return this.firstname + ' ' + this.lastname;
+  }
+}
+
+var christian = {
+  firstname: 'Christian',
+  lastname: 'Parker'
+}
+
+//Don't do this ever! for demo purposes only
+christian.__proto__ = person;
+console.log(christian.getFullName());
+console.log(christian.firstname);
+
+var lisa = {
+  firstname: 'Lisa'
+}
+
+lisa.__proto__ = person;
+console.log(lisa.getFullName());
