@@ -428,146 +428,165 @@ sayHiLater();
 
 // });
 
-function tellMeWhenDone(callback){
-  var a = 1000;
-  var b = 2000;
-
-  callback();
+// function tellMeWhenDone(callback){
+//   var a = 1000;
+//   var b = 2000;
+//
+//   callback();
+// }
+// tellMeWhenDone(function(){
+//   alert('I am Done!');
+// });
+//
+// var person = {
+//   firstname: 'Christian',
+//   lastname: 'parker',
+//   getFullName: function() {
+//
+//     var fullname = this.firstname + ' ' + this.lastname;
+//     return fullname;
+//
+//   }
+// }
+//
+// var logName = function(lang1, lang2) {
+//
+//   console.log('Logged: ' + this.getFullName());
+//   console.log('Arguments: ' + lang1 + ' ' + lang2);
+//   console.log('-----------');
+//
+// }
+//
+// var logPersonName = logName.bind(person);
+// logPersonName('en');
+//
+// logName.call(person, 'en', 'es');
+// logName.apply(person, ['en', 'es']);
+//
+// (function(lang1, lang2) {
+//
+//   console.log('Logged: ' + this.getFullName());
+//   console.log('Arguments: ' + lang1 + ' ' + lang2);
+//   console.log('-----------');
+//
+// }).apply(person, ['es', 'en']);
+//
+// // function borrowing
+// var person2 = {
+//   firstname: 'Lisa',
+//   lastname: 'Parker'
+// }
+//
+// console.log(person.getFullName.apply(person2));
+//
+// // function currying
+// function multiply(a, b) {
+//   return a*b;
+// }
+//
+// var multipleByTwo = multiply.bind(this, 2);
+// console.log(multipleByTwo(4));
+//
+// var multipleByThree = multiply.bind(this, 3);
+// console.log(multipleByThree(4))
+//
+//
+// //functional programming
+// var arr1=[1,2,3];
+// console.log(arr1);
+//
+// var arr2 = [];
+// for (var i=0; i <arr1.length; i++) {
+//   arr2.push(arr1[i] *2);
+//
+// }
+// console.log(arr2);
+//
+// function mapForEach(arr, fn) {
+//
+//   var newArr = [];
+//   for (var i=0; i < arr.length; i++) {
+//     newArr.push(
+//       fn(arr[i])
+//     )
+//   };
+//
+//   return newArr;
+// }
+//
+// var arr1 = [1,2,3];
+// console.log(arr1);
+//
+//
+// var arr2 = mapForEach(arr1, function(item) {
+//   return item * 2;
+// });
+// console.log(arr2);
+//
+//
+// var arr3 = mapForEach(arr1, function(item) {
+//   return item > 2;
+// });
+// console.log(arr3);
+//
+//
+// var checkPastLimit = function(limiter, item) {
+//   return item > limiter;
+// }
+// var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
+// console.log(arr4);
+//
+//
+// var checkPastLimitSimplified = function(limiter) {
+//   return function(limiter, item) {
+//     return item > limiter;
+//   }.bind(this, limiter);
+// };
+//
+// var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
+// console.log(arr5);
+//
+//
+// var person = {
+//   firstname: "default",
+//   lastname: "default",
+//   getFullName: function(){
+//     return this.firstname + ' ' + this.lastname;
+//   }
+// }
+//
+// var christian = {
+//   firstname: 'Christian',
+//   lastname: 'Parker'
+// }
+//
+// //Don't do this ever! for demo purposes only
+// christian.__proto__ = person;
+// console.log(christian.getFullName());
+// console.log(christian.firstname);
+//
+// var lisa = {
+//   firstname: 'Lisa'
+// }
+//
+// lisa.__proto__ = person;
+// console.log(lisa.getFullName());
+//
+// for (var prop in christian) {
+//   if( christian.hasOwnProperty(prop)){
+//   console.log(prop + ': ' + christian[prop]);
+// }
+// }
+//
+function People(firstname, lastname){
+  console.log(this);
+  this.firstname = firstname
+  this.lastname = lastname;
+  console.log('This function is invoked');
 }
-tellMeWhenDone(function(){
-  alert('I am Done!');
-});
 
-var person = {
-  firstname: 'Christian',
-  lastname: 'parker',
-  getFullName: function() {
+var vince = new People('vince', 'parker');
+console.log(vince);
 
-    var fullname = this.firstname + ' ' + this.lastname;
-    return fullname;
-
-  }
-}
-
-var logName = function(lang1, lang2) {
-
-  console.log('Logged: ' + this.getFullName());
-  console.log('Arguments: ' + lang1 + ' ' + lang2);
-  console.log('-----------');
-
-}
-
-var logPersonName = logName.bind(person);
-logPersonName('en');
-
-logName.call(person, 'en', 'es');
-logName.apply(person, ['en', 'es']);
-
-(function(lang1, lang2) {
-
-  console.log('Logged: ' + this.getFullName());
-  console.log('Arguments: ' + lang1 + ' ' + lang2);
-  console.log('-----------');
-
-}).apply(person, ['es', 'en']);
-
-// function borrowing
-var person2 = {
-  firstname: 'Lisa',
-  lastname: 'Parker'
-}
-
-console.log(person.getFullName.apply(person2));
-
-// function currying
-function multiply(a, b) {
-  return a*b;
-}
-
-var multipleByTwo = multiply.bind(this, 2);
-console.log(multipleByTwo(4));
-
-var multipleByThree = multiply.bind(this, 3);
-console.log(multipleByThree(4))
-
-
-//functional programming
-var arr1=[1,2,3];
-console.log(arr1);
-
-var arr2 = [];
-for (var i=0; i <arr1.length; i++) {
-  arr2.push(arr1[i] *2);
-
-}
-console.log(arr2);
-
-function mapForEach(arr, fn) {
-
-  var newArr = [];
-  for (var i=0; i < arr.length; i++) {
-    newArr.push(
-      fn(arr[i])
-    )
-  };
-
-  return newArr;
-}
-
-var arr1 = [1,2,3];
-console.log(arr1);
-
-
-var arr2 = mapForEach(arr1, function(item) {
-  return item * 2;
-});
-console.log(arr2);
-
-
-var arr3 = mapForEach(arr1, function(item) {
-  return item > 2;
-});
-console.log(arr3);
-
-
-var checkPastLimit = function(limiter, item) {
-  return item > limiter;
-}
-var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
-console.log(arr4);
-
-
-var checkPastLimitSimplified = function(limiter) {
-  return function(limiter, item) {
-    return item > limiter;
-  }.bind(this, limiter);
-};
-
-var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
-console.log(arr5);
-
-
-var person = {
-  firstname: "default",
-  lastname: "default",
-  getFullName: function(){
-    return this.firstname + ' ' + this.lastname;
-  }
-}
-
-var christian = {
-  firstname: 'Christian',
-  lastname: 'Parker'
-}
-
-//Don't do this ever! for demo purposes only
-christian.__proto__ = person;
-console.log(christian.getFullName());
-console.log(christian.firstname);
-
-var lisa = {
-  firstname: 'Lisa'
-}
-
-lisa.__proto__ = person;
-console.log(lisa.getFullName());
+var baxter = new People('baxter', 'parker');
+console.log(baxter);
