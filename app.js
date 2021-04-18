@@ -669,3 +669,7 @@ console.log(typeof z);
 
 var q = $("ul.people li");
 console.log(q);
+
+var g = G$('Christian', 'Parker');
+
+g.greet().setLang('es').greet(true).log();
